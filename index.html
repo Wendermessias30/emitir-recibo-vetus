@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🧾 Emitir Recibo — Vétus Gestão de Acesso</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <img
+          src="/image/logo-vetus.png"
+          alt="Vétus Gestão de Acesso"
+          class="logo"
+        />
+        <h1>🧾 Emitir Recibo</h1>
+        <p>Vétus Gestão de Acesso — Área Interna</p>
+      </header>
+
+      <div class="tela">
+        <div class="section">
+          <h2>Dados do Cliente</h2>
+
+          <label for="rec-nome">Nome Completo *</label>
+          <input
+            type="text"
+            id="rec-nome"
+            placeholder="Nome do cliente"
+            required
+          />
+
+          <label for="rec-cpf">CPF *</label>
+          <input
+            type="text"
+            id="rec-cpf"
+            placeholder="___.___.___-__"
+            maxlength="14"
+            required
+          />
+          <div id="rec-cpf-erro" class="erro"></div>
+
+          <label for="rec-pacote">Serviço / Pacote *</label>
+          <select id="rec-pacote">
+            <option value="Pacote Básico|45.00">
+              Pacote Básico — R$ 45,00
+            </option>
+            <option value="Pacote Completo|80.00">
+              Pacote Completo — R$ 80,00
+            </option>
+            <option value="Pacote Premium|130.00">
+              Pacote Premium — R$ 130,00
+            </option>
+            <option value="Serviço Avulso|35.00">
+              Serviço Avulso — R$ 35,00
+            </option>
+          </select>
+
+          <label for="rec-forma">Forma de Pagamento *</label>
+          <select id="rec-forma">
+            <option value="PIX">PIX</option>
+            <option value="Transferência Bancária">
+              Transferência Bancária
+            </option>
+            <option value="Dinheiro">Dinheiro</option>
+          </select>
+
+          <label for="rec-obs">Observações (opcional)</label>
+          <input
+            type="text"
+            id="rec-obs"
+            placeholder="Ex: Pagamento confirmado em 21/10/2026"
+          />
+        </div>
+
+        <button class="btn" id="btn-gerar">📄 Gerar Recibo e Baixar</button>
+
+        <p class="aviso">
+          ⚠️ Use somente após confirmar o recebimento do pagamento.
+        </p>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
