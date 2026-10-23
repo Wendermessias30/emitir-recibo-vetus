@@ -13,11 +13,14 @@
     --dourado-claro: #F0D77C;
     --branco: #FFFFFF;
     --erro: #DC3545;
+    --whats: #25D366;
+    --email: #165DFF;
 }
 
 body {
     min-height: 100vh;
     padding: 20px;
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
 }
 
 .container {
@@ -123,6 +126,7 @@ input.invalido {
     font-weight: bold;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
+    margin-bottom: 10px;
 }
 
 .btn:hover {
@@ -130,9 +134,28 @@ input.invalido {
     box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
 }
 
+.btn-whats {
+    background: linear-gradient(135deg, var(--whats) 0%, #1fb858 100%);
+}
+
+.btn-whats:hover {
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-email {
+    background: linear-gradient(135deg, var(--email) 0%, #0e4cd1 100%);
+}
+
+.btn-email:hover {
+    box-shadow: 0 6px 20px rgba(22, 93, 255, 0.4);
+}
+
 .aviso {
     text-align: center;
     margin-top: 20px;
     font-size: 13px;
     color: #888;
+}
+.oculto {
+    display: none;
 }
